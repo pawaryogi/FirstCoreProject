@@ -1,0 +1,25 @@
+﻿@model EmployeeManagement.Models.Employee
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1> @ViewData["PageTitle"] </h1>
+    @{
+        var emp = ViewData["EMP"] as EmployeeManagement.Models.Employee;
+    }
+
+    <h1> Data using ViewData</h1>
+    <div> Name : @emp.Name</div>
+    <div> Email : @emp.Email</div>
+    <div> Department : @emp.Department</div>
+    <br />
+
+    <h1> Data using Strongly Type View</h1>
+    <div> Name : @Model.Name</div>
+    <div> Email : @Model.Email</div>
+    <div> Department : @Model.Department</div>
+
+</body>
+</html>
